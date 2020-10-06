@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Shop.Models;
 using Shop.Respositories;
@@ -12,10 +8,8 @@ using Shop.Services;
 namespace Shop.Controllers
 {
     [Route("api/account")]
-    [ApiController]
     public class HomeController : ControllerBase
     {
-
         [HttpPost]
         [Route("login")]
         [AllowAnonymous]
@@ -37,7 +31,6 @@ namespace Shop.Controllers
                 user = user,
                 token = token   
             };
-
         }
 
         [HttpGet]
